@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Company.Application.Share.Prism;
+using MahApps.Metro.Controls;
+using Shell.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +20,21 @@ namespace Shell.Views
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as MainWindowViewModel;
+
+            //第一步，加载模块
+            vm.ModuleManager.LoadModule(ModuleNames.ApplicationLoginModule);
+            //第二步，导航区域
+            vm.RegionManager.RequestNavigate(RegionNames.MainRegion, "LoginView");
         }
     }
 }

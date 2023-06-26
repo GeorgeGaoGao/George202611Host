@@ -10,5 +10,6 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <TextBlock Text="MainView"  FontSize="100"/>
+        <Button Content="Button" Width="100" Height="25" Margin="100"/>
     </Grid>
 </UserControl>

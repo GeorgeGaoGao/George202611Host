@@ -12,5 +12,12 @@ namespace Company.Application.Share.Prism
         /// 模块的目录
         /// </summary>
         public const string ModulePath = @".\Modules";
+
+        /// <summary>
+        /// 登录模块
+        /// </summary>
+        public const string ApplicationLoginModule = "ApplicationLoginModule";
+
+        
     }
 }
