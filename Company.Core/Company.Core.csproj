@@ -84,6 +84,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extension\DependencyExtension.cs" />
+    <Compile Include="Ioc\ExposedServiceAttriubute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
