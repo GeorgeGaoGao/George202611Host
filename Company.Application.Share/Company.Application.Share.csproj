@@ -93,8 +93,11 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\LoginSuccessEvent.cs" />
+    <Compile Include="Model\CurrentUser.cs" />
     <Compile Include="Prism\ModuleNames.cs" />
     <Compile Include="Prism\RegionNames.cs" />
+    <Compile Include="Prism\ViewNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

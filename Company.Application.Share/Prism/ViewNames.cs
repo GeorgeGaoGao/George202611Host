@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Company.Application.Share.Prism
+{
+    public static class ViewNames
+    {
+        /// <summary>
+        /// 登录界面
+        /// </summary>
+        public const string LoginView = "LoginView";
+
+        /// <summary>
+        /// 主界面
+        /// </summary>
+        public const string MainView = "MainView";
+
+    }
+}

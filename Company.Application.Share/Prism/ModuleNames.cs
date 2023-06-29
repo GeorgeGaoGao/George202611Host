@@ -18,6 +18,13 @@ namespace Company.Application.Share.Prism
         /// </summary>
         public const string ApplicationLoginModule = "ApplicationLoginModule";
 
+        /// <summary>
+        /// 主界面模块
+        /// </summary>
+        public const string ApplicatoinMainModule = "ApplicatoinMainModule";
+
         
+
+
     }
 }

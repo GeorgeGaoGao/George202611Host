@@ -1,4 +1,5 @@
 ﻿using Company.Application.Share.Prism;
+using Company.Core;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Unity;
@@ -32,7 +33,7 @@ namespace Shell
         {
             base.ConfigureModuleCatalog(moduleCatalog);
 
-            //moduleCatalog.AddModule<ApplicatoinMainModule>();
+            moduleCatalog.AddModule<CoreModule>();
         }
 
         protected override IModuleCatalog CreateModuleCatalog()

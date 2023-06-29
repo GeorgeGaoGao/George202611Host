@@ -5,11 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Shell.Views"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:prism="http://prismlibrary.com/"
         xmlns:share="clr-namespace:Company.Application.Share.Prism;assembly=Company.Application.Share"
-        prism:ViewModelLocator.AutoWireViewModel="True"
-        Loaded="MetroWindow_Loaded"
+        prism:ViewModelLocator.AutoWireViewModel="True"        
         mc:Ignorable="d"
         Title="{Binding Title}" Height="450" Width="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+        
     <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.MainRegion}"/>
 </mah:MetroWindow>
