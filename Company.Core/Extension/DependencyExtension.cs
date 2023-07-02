@@ -19,7 +19,7 @@ namespace Company.Core.Extension
         private static List<Type> GetTypes(Assembly assembly)
         {
             var result = assembly.GetTypes().Where(t => t != null && t.IsClass && !t.IsAbstract &&
-            t.CustomAttributes.Any(p => p.AttributeType == typeof(ExposedServiceAttriubute))).ToList();
+            t.CustomAttributes.Any(p => p.AttributeType == typeof(ExposedServiceAttribute))).ToList();
 
             return result;
         }
@@ -41,10 +41,10 @@ namespace Company.Core.Extension
         }
 
 
-        private static IEnumerable<ExposedServiceAttriubute> GetExposedServices(Type type)
+        private static IEnumerable<ExposedServiceAttribute> GetExposedServices(Type type)
         {
             var typeInfo = type.GetTypeInfo();
-            return typeInfo.GetCustomAttributes<ExposedServiceAttriubute>();
+            return typeInfo.GetCustomAttributes<ExposedServiceAttribute>();
         }
 
         public static void RegisterAssembly(IContainerRegistry container,Type type) 

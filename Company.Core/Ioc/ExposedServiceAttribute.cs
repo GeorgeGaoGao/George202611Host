@@ -26,7 +26,7 @@ namespace Company.Core.Ioc
     /// 标注类型的生命周期、是否自动初始化
     /// </summary>
     [AttributeUsage(AttributeTargets.Class,AllowMultiple =false)]
-    public class ExposedServiceAttriubute : Attribute
+    public class ExposedServiceAttribute : Attribute
     {
         public Lifetime Lifetime { get; set; }
 
@@ -34,7 +34,7 @@ namespace Company.Core.Ioc
 
         public Type[] Types { get; set; }
 
-        public ExposedServiceAttriubute(Lifetime lifetime = Lifetime.Transient, params Type[] types)
+        public ExposedServiceAttribute(Lifetime lifetime = Lifetime.Transient, params Type[] types)
         {
             Lifetime = lifetime;
             Types = types;

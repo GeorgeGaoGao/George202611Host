@@ -8,7 +8,8 @@
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:prism="http://prismlibrary.com/"
         xmlns:share="clr-namespace:Company.Application.Share.Prism;assembly=Company.Application.Share"
-        prism:ViewModelLocator.AutoWireViewModel="True"        
+        prism:ViewModelLocator.AutoWireViewModel="True"     
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="{Binding Title}" Height="450" Width="800">
     <i:Interaction.Triggers>

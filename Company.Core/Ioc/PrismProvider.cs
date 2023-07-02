@@ -1,4 +1,5 @@
-﻿using Prism.Events;
+﻿using Company.Core.Language;
+using Prism.Events;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
@@ -12,17 +13,19 @@ using System.Threading.Tasks;
 
 namespace Company.Core.Ioc
 {
-    [ExposedServiceAttriubute(Lifetime.Singleton,AutoInitialize =true)]
+    [ExposedServiceAttribute(Lifetime.Singleton,AutoInitialize =true)]
     public sealed class PrismProvider
     {
 
         public PrismProvider(
+            ILanguageManager language,
             IContainerExtension container,
             IRegionManager regionManager,
             IDialogService dialogService,
             IEventAggregator eventAggregator,
             IModuleManager moduleManager)
         {
+            LanguageManager = language;
             Container = container;
             RegionManager = regionManager;
             DialogService = dialogService;
@@ -30,6 +33,10 @@ namespace Company.Core.Ioc
             ModuleManager = moduleManager; 
         }
 
+        /// <summary>
+        /// 语言助手
+        /// </summary>
+        public static ILanguageManager LanguageManager { get; private set; }
 
         /// <summary>
         /// 容器

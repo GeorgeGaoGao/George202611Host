@@ -89,9 +89,13 @@
     <Compile Include="Dialog\PopupBox.xaml.cs">
       <DependentUpon>PopupBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Enums\LanguageType.cs" />
     <Compile Include="Extension\DependencyExtension.cs" />
-    <Compile Include="Ioc\ExposedServiceAttriubute.cs" />
+    <Compile Include="Helper\Assert.cs" />
+    <Compile Include="Ioc\ExposedServiceAttribute.cs" />
     <Compile Include="Ioc\PrismProvider.cs" />
+    <Compile Include="Language\ILanguageManager.cs" />
+    <Compile Include="Language\LanguageManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

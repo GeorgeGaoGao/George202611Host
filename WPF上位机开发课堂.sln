@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.UI", "Company.UI\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Application.Login", "Company.Application.Login\Company.Application.Login.csproj", "{C95C01BD-7B2F-4C3D-8FE2-F24ADA3E27D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfHelper", "WpfHelper\WpfHelper.csproj", "{4DEDD8B7-B0CB-41F7-A2EA-E1D0718366D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{C95C01BD-7B2F-4C3D-8FE2-F24ADA3E27D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C95C01BD-7B2F-4C3D-8FE2-F24ADA3E27D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C95C01BD-7B2F-4C3D-8FE2-F24ADA3E27D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DEDD8B7-B0CB-41F7-A2EA-E1D0718366D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEDD8B7-B0CB-41F7-A2EA-E1D0718366D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEDD8B7-B0CB-41F7-A2EA-E1D0718366D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEDD8B7-B0CB-41F7-A2EA-E1D0718366D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{45944843-9AF1-4CBC-A9C6-021B18725A32} = {0881FC87-A4FA-45EA-8948-36CB7D9E8619}
 		{F2DCA4BF-5755-4A1F-8C3A-55BD345BC49D} = {761166E4-9751-4A44-BEA0-415E6036A0C8}
 		{C95C01BD-7B2F-4C3D-8FE2-F24ADA3E27D4} = {0881FC87-A4FA-45EA-8948-36CB7D9E8619}
+		{4DEDD8B7-B0CB-41F7-A2EA-E1D0718366D2} = {0881FC87-A4FA-45EA-8948-36CB7D9E8619}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5C785D8-BDBC-4457-A3A9-1227B93869D7}

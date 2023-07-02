@@ -4,12 +4,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Company.Application.Main.Views"
+             xmlns:share="clr-namespace:Company.Application.Share.Prism;assembly=Company.Application.Share"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" Background="LightBlue"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
-        <TextBlock Text="MainView"  FontSize="100"/>
-        <Button Content="Button" Width="100" Height="25" Margin="100"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="500"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <ContentControl prism:RegionManager.RegionName="{x:Static share:RegionNames.ImageRegion}"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ContentControl Grid.Row="0" prism:RegionManager.RegionName="{x:Static share:RegionNames.MenuRegion}"/>
+        </Grid>
     </Grid>
 </UserControl>

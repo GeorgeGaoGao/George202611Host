@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Shell.ViewModels
@@ -31,9 +32,12 @@ namespace Shell.ViewModels
 
         private void Loaded()
         {
-            //第一步，加载模块
+            IRegion mainRegion = PrismProvider.RegionManager.Regions[RegionNames.MainRegion];
+            mainRegion.NavigationService.Navigated += NavigationService_Navigated;
+
+            //第一步，加载Login模块
             PrismProvider.ModuleManager.LoadModule(ModuleNames.ApplicationLoginModule);
-            //第二步，导航区域
+            //第二步，导航Login区域
             PrismProvider.RegionManager.RequestNavigate(RegionNames.MainRegion, ViewNames.LoginView);
 
             //订阅用户登录成功事件
@@ -46,6 +50,37 @@ namespace Shell.ViewModels
             PrismProvider.ModuleManager.LoadModule(ModuleNames.ApplicatoinMainModule);
             //导航到主区域
             PrismProvider.RegionManager.RequestNavigate(RegionNames.MainRegion, ViewNames.MainView);
+
+        }
+
+        private Window MainWindow { get; set; }  = Application.Current.MainWindow;
+
+        //当主区域导航时
+        private void NavigationService_Navigated(object sender, RegionNavigationEventArgs e)
+        {
+            switch (e.Uri.OriginalString)
+            {
+                case ViewNames.LoginView:
+                    //MainWindow.ResizeMode = ResizeMode.NoResize;
+                    //MainWindow.SizeToContent = SizeToContent.WidthAndHeight;
+                    //MainWindow.WindowState = WindowState.Normal;
+
+                    //MainWindow.Width = 600;
+                    //MainWindow.Height = 350;
+                    //MainWindow.WindowStyle = WindowStyle.None;
+                    break;
+
+                case ViewNames.MainView:
+                    MainWindow.Width = 1920;
+                    MainWindow.Height = 1080;
+                    MainWindow.ResizeMode = ResizeMode.CanResize;
+                    MainWindow.SizeToContent = SizeToContent.Manual;
+                    MainWindow.WindowState = WindowState.Maximized;
+                    MainWindow.WindowStyle = WindowStyle.SingleBorderWindow;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private string title = "重庆教主上位机开发VIP课程";

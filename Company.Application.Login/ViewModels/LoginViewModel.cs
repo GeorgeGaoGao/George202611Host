@@ -17,7 +17,7 @@ namespace Company.Application.Login.ViewModels
     public class LoginViewModel : ReactiveObject
     {
         [Reactive]
-        public CurrentUser CurrentUser { get; set; } = new CurrentUser();
+        public CurrentUser CurrentUser { get; set; } = new CurrentUser() { UserName = "admin", Password = "12345678" };
 
         public DelegateCommand LoginCommand => new DelegateCommand(() =>
         {

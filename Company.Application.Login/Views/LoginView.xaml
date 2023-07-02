@@ -43,16 +43,21 @@
         <Grid Grid.Column="1" Background="White">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal" Margin="5">
-                    <TextBlock Text="用户名:" Width="70" Margin="5"/>
+                    <TextBlock Text="{DynamicResource 用户名}" Width="70" Margin="5"/>
                     <TextBox Width="120" Text="{Binding CurrentUser.UserName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="5">
-                    <TextBlock Text="密码:" Width="70" Margin="5"/>
+                    <TextBlock Text="{DynamicResource 密码}" Width="70" Margin="5"/>
                     <TextBox Width="120" Text="{Binding CurrentUser.Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="5">
                     <Button Content="登录" Command="{Binding LoginCommand}" Width="120" Margin="80 0 0 0"/>
                 </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="15">
+                <RadioButton x:Name="CN" Content="简体" Margin="5" IsChecked="True"/>
+                <RadioButton x:Name="TW" Content="繁体" Margin="5" />
+                <RadioButton x:Name="US" Content="英语" Margin="5" />
             </StackPanel>
         </Grid>
     </Grid>
