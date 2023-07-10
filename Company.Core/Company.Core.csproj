@@ -92,10 +92,15 @@
     <Compile Include="Enums\LanguageType.cs" />
     <Compile Include="Extension\DependencyExtension.cs" />
     <Compile Include="Helper\Assert.cs" />
+    <Compile Include="Helper\MemoryHelper.cs" />
     <Compile Include="Ioc\ExposedServiceAttribute.cs" />
     <Compile Include="Ioc\PrismProvider.cs" />
     <Compile Include="Language\ILanguageManager.cs" />
     <Compile Include="Language\LanguageManager.cs" />
+    <Compile Include="Model\ColorBGR.cs" />
+    <Compile Include="Model\ColorBGRA.cs" />
+    <Compile Include="Model\UnmanagedArray2D.cs" />
+    <Compile Include="Model\UnmanagedArrayBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

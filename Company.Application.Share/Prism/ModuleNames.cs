@@ -28,6 +28,11 @@ namespace Company.Application.Share.Prism
         /// </summary>
         public const string ApplicationMenuModule = "ApplicationMenuModule";
 
+        /// <summary>
+        /// 图像显示模块
+        /// </summary>
+        public const string ApplicationImageModule = "ApplicationImageModule";
+
         
 
 

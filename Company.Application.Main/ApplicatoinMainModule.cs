@@ -13,6 +13,7 @@ namespace Company.Application.Main
 {
     [Module(ModuleName = ModuleNames.ApplicatoinMainModule,OnDemand = true)]
     [ModuleDependency(ModuleNames.ApplicationMenuModule)]
+    [ModuleDependency(ModuleNames.ApplicationImageModule)]
     public class ApplicatoinMainModule : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
