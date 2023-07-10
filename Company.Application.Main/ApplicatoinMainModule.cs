@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 
 namespace Company.Application.Main
 {
+    [Module(ModuleName = ModuleNames.ApplicatoinMainModule,OnDemand = true)]
+    [ModuleDependency(ModuleNames.ApplicationMenuModule)]
     public class ApplicatoinMainModule : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
