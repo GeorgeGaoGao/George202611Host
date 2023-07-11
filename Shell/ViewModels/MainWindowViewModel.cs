@@ -44,12 +44,25 @@ namespace Shell.ViewModels
             PrismProvider.EventAggregator.GetEvent<LoginSuccessEvent>().Subscribe(OnLogined, ThreadOption.UIThread);
         }
 
+        public bool IsHardwareInitialized { get; private set; } = false;
+
         private void OnLogined(CurrentUser user)
         {
-            //加载主界面
-            PrismProvider.ModuleManager.LoadModule(ModuleNames.ApplicatoinMainModule);
-            //导航到主区域
-            PrismProvider.RegionManager.RequestNavigate(RegionNames.MainRegion, ViewNames.MainView);
+            if (IsHardwareInitialized)
+            {
+                //加载主界面
+                PrismProvider.ModuleManager.LoadModule(ModuleNames.ApplicatoinMainModule);
+                //导航到主区域
+                PrismProvider.RegionManager.RequestNavigate(RegionNames.MainRegion, ViewNames.MainView);
+            }
+            else
+            {
+                //加载硬件初始化模块
+                PrismProvider.ModuleManager.LoadModule(ModuleNames.ApplicationInitializeModule);
+                //导航到主区域
+                PrismProvider.RegionManager.RequestNavigate(RegionNames.MainRegion, ViewNames.InitializeView);
+            }
+           
 
         }
 

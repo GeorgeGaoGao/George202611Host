@@ -17,7 +17,7 @@ namespace Company.Core.Helper
         /// </summary>
         /// <param name="intPtr"></param>
         /// <param name="size"></param>
-        [DllImport("kernel32.dll",EntryPoint ="RtZeroMemory",CharSet = CharSet.Ansi)]
+        [DllImport("kernel32.dll",EntryPoint = "RtlZeroMemory", CharSet = CharSet.Ansi)]
         public static extern void ZeroMemory(IntPtr intPtr, long size);
 
 
@@ -27,7 +27,7 @@ namespace Company.Core.Helper
         /// <param name="dest"></param>
         /// <param name="src"></param>
         /// <param name="length"></param>
-        [DllImport("kernel32.dll", EntryPoint = "RtMoveMemory", CharSet = CharSet.Ansi)]
+        [DllImport("kernel32.dll", EntryPoint = "RtlMoveMemory", CharSet = CharSet.Ansi)]
         public static extern void CopyMemory(IntPtr dest, IntPtr src,long length);
 
 
@@ -38,7 +38,7 @@ namespace Company.Core.Helper
         /// <param name="length"></param>
         /// <param name="value"></param>
 
-        [DllImport("kernel32.dll", EntryPoint = "RtFillMemory", CharSet = CharSet.Ansi)]
+        [DllImport("kernel32.dll", EntryPoint = "RtlFillMemory", CharSet = CharSet.Ansi)]
         public static extern void FillMemory(IntPtr dest,long length,byte value);
     }
 }

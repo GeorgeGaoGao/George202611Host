@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Company.Hardware.DaHua")]
+[assembly: AssemblyTitle("Company.Hardware.Detector.None")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Company.Hardware.DaHua")]
+[assembly: AssemblyProduct("Company.Hardware.Detector.None")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("75bdbe35-21a5-474b-ad4e-8f4d7d423352")]
+[assembly: Guid("1b84e705-92c5-4bac-9cee-52bca24b91a2")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

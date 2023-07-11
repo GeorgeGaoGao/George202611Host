@@ -54,7 +54,7 @@ namespace Company.Hardware.Camera
         // 抽象方法，由子类实现
 
         public abstract bool Trigger();
-        public abstract void DoClose();
+        public abstract bool DoClose();
         public abstract bool DoInit();
     }
 }

@@ -10,6 +10,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Threading;
 
 namespace Company.Core.Ioc
 {
@@ -30,7 +32,9 @@ namespace Company.Core.Ioc
             RegionManager = regionManager;
             DialogService = dialogService;
             EventAggregator = eventAggregator;
-            ModuleManager = moduleManager; 
+            ModuleManager = moduleManager;
+
+            Dispatcher = System.Windows.Application.Current.Dispatcher;
         }
 
         /// <summary>
@@ -62,6 +66,8 @@ namespace Company.Core.Ioc
         /// 模块管理器
         /// </summary>
         public static IModuleManager ModuleManager { get; private set; }
+
+        public static Dispatcher Dispatcher { get; private set; }
 
     }
 }

@@ -11,15 +11,19 @@ namespace Company.Hardware.Camera
     /// </summary>
     public class CameraConfig
     {
+
+        public string Photo { get; set; } = "1.jpg";
+
+
         /// <summary>
         /// 相机宽度
         /// </summary>
-        public int Width { get;set; }
+        public int Width { get; set; } = 2644;
 
         /// <summary>
         /// 相机高度
         /// </summary>
-        public int Height { get;set; }  
+        public int Height { get; set; } = 2041;
 
     }
 }

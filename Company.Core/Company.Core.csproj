@@ -91,7 +91,10 @@
     </Compile>
     <Compile Include="Enums\LanguageType.cs" />
     <Compile Include="Extension\DependencyExtension.cs" />
+    <Compile Include="Extension\ImageExtension.cs" />
     <Compile Include="Helper\Assert.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="Helper\MemoryHelper.cs" />
     <Compile Include="Ioc\ExposedServiceAttribute.cs" />
     <Compile Include="Ioc\PrismProvider.cs" />

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Company.Hardware.HIK")]
+[assembly: AssemblyTitle("Company.Hardware.Camera.None")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Company.Hardware.HIK")]
+[assembly: AssemblyProduct("Company.Hardware.Camera.None")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("af1b259d-2fc7-4399-a33f-90047dea101b")]
+[assembly: Guid("a171d714-0556-436b-a57f-da4247c24597")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

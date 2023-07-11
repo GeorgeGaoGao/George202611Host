@@ -54,4 +54,8 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)\bin\Debug\$(ProjectName).dll" "$(SolutionDir)\Shell\bin\Debug\Modules\" /Y /S
+xcopy "$(ProjectDir)\bin\Release\$(ProjectName).dll" "$(SolutionDir)\Shell\bin\Release\Modules\" /Y /S</PostBuildEvent>
+  </PropertyGroup>
 </Project>

@@ -33,6 +33,11 @@ namespace Company.Application.Share.Prism
         /// </summary>
         public const string ApplicationImageModule = "ApplicationImageModule";
 
+        /// <summary>
+        /// 硬件初始化模块
+        /// </summary>
+        public const string ApplicationInitializeModule = "ApplicationInitializeModule";
+
         
 
 

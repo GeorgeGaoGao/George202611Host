@@ -18,5 +18,12 @@ namespace Company.Application.Share.Prism
         /// </summary>
         public const string MainView = "MainView";
 
+        /// <summary>
+        /// 硬件初始化界面
+        /// </summary>
+        public const string InitializeView = "InitializeView";
+
+        
+
     }
 }
