@@ -1,5 +1,6 @@
 ﻿using Company.Core.Helper;
 using Company.Core.Model;
+using Company.Logger;
 using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
@@ -29,7 +30,7 @@ namespace Company.Hardware.Camera.None
                 System.Drawing.Bitmap bitmap = ImageHelper.Load(filename);
                 if(unmanagedArray.Width!=bitmap.Width|| unmanagedArray.Height != bitmap.Height)
                 {
-                    throw new Exception("系统设置中相机尺寸与实际相机分辨率不一致");
+                    Logs.LogError(new Exception("系统设置中相机尺寸与实际相机分辨率不一致"));
                 }
                 BitmapData data = bitmap.LockBits(new System.Drawing.Rectangle(0,0,bitmap.Width,bitmap.Height),
                     System.Drawing.Imaging.ImageLockMode.ReadWrite,

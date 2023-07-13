@@ -1,5 +1,6 @@
 ﻿using Company.Core.Helper;
 using Company.Core.Model;
+using Company.Logger;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -38,7 +39,7 @@ namespace Company.Hardware.Detector.None
                 //定时输出本地的tiff图像
                 if(unmanagedArray.Width!= DetectorConfig.Width|| unmanagedArray.Height != DetectorConfig.Height)
                 {
-                    throw new Exception("系统设置中FPD尺寸与实际FPD分辨率不一致");
+                    Logs.LogError(new Exception("系统设置中FPD尺寸与实际FPD分辨率不一致"));
                 }
 
                 using(var temp = unmanagedArray.DeepClone())
