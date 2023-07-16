@@ -95,6 +95,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Company.Application.Config\Company.Application.Config.csproj">
+      <Project>{f768114b-5baa-4361-a4b0-6483e6035c28}</Project>
+      <Name>Company.Application.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Application.Image\Company.Application.Image.csproj">
+      <Project>{afd08739-39d6-48fb-8c74-3f7513e90552}</Project>
+      <Name>Company.Application.Image</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Application.Initialize\Company.Application.Initialize.csproj">
+      <Project>{2045d378-75f1-46dd-ac03-91b100f024a0}</Project>
+      <Name>Company.Application.Initialize</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Company.Application.Login\Company.Application.Login.csproj">
       <Project>{c95c01bd-7b2f-4c3d-8fe2-f24ada3e27d4}</Project>
       <Name>Company.Application.Login</Name>
@@ -102,6 +114,10 @@
     <ProjectReference Include="..\Company.Application.Main\Company.Application.Main.csproj">
       <Project>{45944843-9af1-4cbc-a9c6-021b18725a32}</Project>
       <Name>Company.Application.Main</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Application.Menu\Company.Application.Menu.csproj">
+      <Project>{5c93dcaf-cf31-4871-92d6-1d356d4e73e4}</Project>
+      <Name>Company.Application.Menu</Name>
     </ProjectReference>
     <ProjectReference Include="..\Company.Application.Share\Company.Application.Share.csproj">
       <Project>{67e2bce5-89ae-4d1d-82c2-67f2a6f51c6f}</Project>

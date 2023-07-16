@@ -44,6 +44,7 @@ namespace Company.Core.Helper
         public static void Save(object obj, string fileName,bool indented = false) 
         {
             string content = Serialize(obj, indented);
+            File.WriteAllText(fileName, content);
         }
 
         private static string Serialize(object obj, bool indented)

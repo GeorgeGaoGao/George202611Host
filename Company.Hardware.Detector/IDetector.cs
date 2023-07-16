@@ -23,7 +23,7 @@ namespace Company.Hardware.Detector
         /// 初始化平板探测器
         /// </summary>
         /// <returns></returns>
-        bool Init(DetectorConfig config);
+        bool Init(IDetectorConfigProvider provider);
 
         /// <summary>
         /// 连续采集数据

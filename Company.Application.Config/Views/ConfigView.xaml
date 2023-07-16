@@ -4,11 +4,48 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Company.Application.Config.Views"
-             xmlns:prism="http://prismlibrary.com/"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:prism="http://prismlibrary.com/" xmlns:controls="clr-namespace:Company.UI.Controls;assembly=Company.UI"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              Width="430" Height="500">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TabControl Controls:HeaderedControlHelper.HeaderFontSize="20">
+            <TabItem Header="软件设置">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <TextBlock Text="软件名称:" Width="100"/>
+                        <TextBox Text="{Binding SystemConfigManager.Config.SoftwareConfig.Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="相机参数">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <TextBlock Text="默认图像:" Width="100"/>
+                        <TextBlock Text="{Binding SystemConfigManager.Config.CameraConfig.Photo,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <TextBlock Text="相机宽度:" Width="100"/>
+                        <TextBox Text="{Binding SystemConfigManager.Config.CameraConfig.Width,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <TextBlock Text="相机高度:" Width="100"/>
+                        <TextBox Text="{Binding SystemConfigManager.Config.CameraConfig.Height,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="平板探测器参数" >
+                <controls:WpfPropertyGrid SelectedObject="{Binding SystemConfigManager.Config.DetectorConfig}"/>
+            </TabItem>
+        </TabControl>
+        <DockPanel HorizontalAlignment="Right" Grid.Row="1" Margin="0,5">
+            <Button Content="{DynamicResource 确定}" Command="{Binding OKCommand}" Width="80" Height="30" Margin="5" FontSize="14"/>
+            <Button Content="{DynamicResource 取消}" IsCancel="True" Width="80" Height="30" Margin="5" FontSize="14"/>
+        </DockPanel>
     </Grid>
 </UserControl>

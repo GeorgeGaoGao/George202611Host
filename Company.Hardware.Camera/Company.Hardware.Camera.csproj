@@ -53,6 +53,10 @@
       <Project>{79113834-9F6D-4831-9B8B-3A3DE2243B34}</Project>
       <Name>Company.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Company.Logger\Company.Logger.csproj">
+      <Project>{1CB3C6EE-4AB9-442F-9D4C-4E0A0429F39D}</Project>
+      <Name>Company.Logger</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

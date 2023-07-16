@@ -49,8 +49,8 @@ namespace Company.Application.Initialize.Services
                 throw new Exception("重复初始化硬件");
             }
 
-            Task<bool> task_camera = Task.Run(() => Camera.Init(new CameraConfig()));
-            Task<bool> task_detector = Task.Run(() => Detector.Init(new DetectorConfig()));
+            Task<bool> task_camera = Task.Run(() => Camera.Init(SystemConfigProvider));
+            Task<bool> task_detector = Task.Run(() => Detector.Init(SystemConfigProvider));
             
             var list = await Task.WhenAll(task_camera, task_detector);//等待
             bool result = list.All(p => p);

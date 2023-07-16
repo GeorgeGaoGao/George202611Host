@@ -3,4 +3,6 @@
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
     <system:String x:Key="用户名">用戶名</system:String>
     <system:String x:Key="密码">密碼</system:String>
+    <system:String x:Key="确定">确定</system:String>
+    <system:String x:Key="取消">取消</system:String>
 </ResourceDictionary>

@@ -20,7 +20,7 @@ namespace Company.Hardware.Camera
         /// 初始化相机
         /// </summary>
         /// <returns></returns>
-        bool Init(CameraConfig cameraConfig);
+        bool Init(ICameraConfigProvider provider);
 
         /// <summary>
         /// 相机拍照

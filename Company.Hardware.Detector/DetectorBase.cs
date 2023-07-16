@@ -1,4 +1,5 @@
 ﻿using Company.Core.Model;
+using Company.Logger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,8 @@ namespace Company.Hardware.Detector
         /// 是否采集中
         /// </summary>
         public bool IsGrabbing { get; set;}
-            
+
+
         public event Action<DetectorImage> OnGrabbed;
 
         public bool Close()
@@ -33,9 +35,21 @@ namespace Company.Hardware.Detector
             return false;
         }
 
-        public bool Init(DetectorConfig config)
+        public bool Init(IDetectorConfigProvider provider)
         {
-            this.DetectorConfig = config;
+            this.DetectorConfig = provider.DetectorConfig;
+
+            provider.OnChanged += (() =>
+            {
+                //todo 重新初始化
+
+                Logs.LogInfo($"平板探测器重新初始化 Width:{DetectorConfig.Width}  Height:{DetectorConfig.Height}");
+
+                DoInit();
+
+            });
+
+
             if (Initialized)
             {
                 throw new Exception("重复初始化平板探测器");
