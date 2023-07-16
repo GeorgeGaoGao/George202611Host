@@ -93,6 +93,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\ISoftwareConfigProvider.cs" />
+    <Compile Include="Config\ISystemConfigProvider.cs" />
+    <Compile Include="Config\SoftwareConfig.cs" />
     <Compile Include="Events\LoginSuccessEvent.cs" />
     <Compile Include="Model\CurrentUser.cs" />
     <Compile Include="Prism\ModuleNames.cs" />
@@ -123,6 +126,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Company.Hardware.Camera\Company.Hardware.Camera.csproj">
+      <Project>{5bdd25f3-d603-43e5-bca8-445c1db96ff0}</Project>
+      <Name>Company.Hardware.Camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Hardware.Detector\Company.Hardware.Detector.csproj">
+      <Project>{4bdd85fd-34b0-4726-8c97-c215e30abde9}</Project>
+      <Name>Company.Hardware.Detector</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.7.0\build\Fody.targets" Condition="Exists('..\packages\Fody.6.7.0\build\Fody.targets')" />

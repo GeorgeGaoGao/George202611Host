@@ -38,6 +38,11 @@ namespace Company.Application.Share.Prism
         /// </summary>
         public const string ApplicationInitializeModule = "ApplicationInitializeModule";
 
+        /// <summary>
+        /// 系统配置模块
+        /// </summary>
+        public const string ApplicationConfigModule = "ApplicationConfigModule";
+
         
 
 

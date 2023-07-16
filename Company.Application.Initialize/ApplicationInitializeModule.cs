@@ -16,6 +16,7 @@ namespace Company.Application.Initialize
     /// 硬件初始化模块
     /// </summary>
     [Module(ModuleName = ModuleNames.ApplicationInitializeModule, OnDemand = true)]
+    [ModuleDependency(ModuleNames.ApplicationConfigModule)] //硬件初始化模块依赖于系统配置模块，即先加载系统配置模块，后加载硬件初始化模块
     public class ApplicationInitializeModule : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)

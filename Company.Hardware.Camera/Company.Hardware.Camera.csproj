@@ -44,6 +44,7 @@
     <Compile Include="CameraBase.cs" />
     <Compile Include="CameraConfig.cs" />
     <Compile Include="ICamera.cs" />
+    <Compile Include="ICameraConfigProvider.cs" />
     <Compile Include="Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

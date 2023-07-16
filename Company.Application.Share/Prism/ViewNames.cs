@@ -23,6 +23,11 @@ namespace Company.Application.Share.Prism
         /// </summary>
         public const string InitializeView = "InitializeView";
 
+        /// <summary>
+        /// 系统配置界面
+        /// </summary>
+        public const string ConfigView = "ConfigView";
+
         
 
     }

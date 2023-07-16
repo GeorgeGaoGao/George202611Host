@@ -1,0 +1,18 @@
+﻿using Company.Application.Share.Config;
+using Company.Hardware.Camera;
+using Company.Hardware.Detector;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Company.Application.Config.Models
+{
+    public class SystemConfigModel
+    {
+        public SoftwareConfig SoftwareConfig { get; set; } = new SoftwareConfig();
+        public CameraConfig CameraConfig { get; set; } = new CameraConfig();
+        public DetectorConfig DetectorConfig { get; set; } = new DetectorConfig();
+    }
+}

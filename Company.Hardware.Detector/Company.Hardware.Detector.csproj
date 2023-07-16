@@ -97,6 +97,7 @@
     <Compile Include="DetectorConfig.cs" />
     <Compile Include="DetectorImage.cs" />
     <Compile Include="IDetector.cs" />
+    <Compile Include="IDetectorConfigProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
