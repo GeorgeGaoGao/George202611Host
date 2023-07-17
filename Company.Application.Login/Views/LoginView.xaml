@@ -50,6 +50,10 @@
                     <TextBlock Text="{DynamicResource 密码}" Width="70" Margin="5"/>
                     <TextBox Width="120" Text="{Binding CurrentUser.Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
+                <Grid Margin="8 0 5 0">
+                    <CheckBox IsChecked="{Binding IsRemember}" Content="记住密码"  HorizontalAlignment="Left"/>
+                    <CheckBox IsChecked="{Binding IsAutoLogin}" Content="自动登录" HorizontalAlignment="Right"/>
+                </Grid>
                 <StackPanel Orientation="Horizontal" Margin="5">
                     <Button Content="登录" Command="{Binding LoginCommand}" Width="120" Margin="80 0 0 0"/>
                 </StackPanel>

@@ -25,5 +25,10 @@ namespace Company.Core.Cache
         /// 是否记住密码
         /// </summary>
         IsRemember,
+
+        /// <summary>
+        /// 缓存数据
+        /// </summary>
+        AppData,
     }
 }

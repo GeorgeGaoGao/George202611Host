@@ -82,9 +82,8 @@ namespace Company.Core.Cache
         /// <summary>
         /// 删除缓存内容
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="key"></param>
-        public void Delete<T>(ValueType key)
+        public void Delete(ValueType key)
         {
             lock (cacheLock)
             {

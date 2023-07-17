@@ -33,6 +33,6 @@ namespace Company.Core.Cache
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="key"></param>
-        void Delete<T>(ValueType key);
+        void Delete(ValueType key);
     }
 }
