@@ -88,6 +88,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\CacheKey.cs" />
+    <Compile Include="Cache\CacheManager.cs" />
+    <Compile Include="Cache\ICacheManager.cs" />
     <Compile Include="Config\ConfigKey.cs" />
     <Compile Include="Config\ConfigManager.cs" />
     <Compile Include="Config\IConfigManager.cs" />
@@ -98,6 +101,7 @@
     <Compile Include="Enums\LanguageType.cs" />
     <Compile Include="Extension\DependencyExtension.cs" />
     <Compile Include="Extension\ImageExtension.cs" />
+    <Compile Include="Extension\ValueTypeExtension.cs" />
     <Compile Include="Helper\Assert.cs" />
     <Compile Include="Helper\FileHelper.cs" />
     <Compile Include="Helper\ImageHelper.cs" />

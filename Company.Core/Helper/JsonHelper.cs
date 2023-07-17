@@ -47,7 +47,7 @@ namespace Company.Core.Helper
             File.WriteAllText(fileName, content);
         }
 
-        private static string Serialize(object obj, bool indented)
+        public static string Serialize(object obj, bool indented = false)
         {
             Formatting formatting = indented ? Formatting.Indented : Formatting.None;
             return JsonConvert.SerializeObject(obj, formatting);
