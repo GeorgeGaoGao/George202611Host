@@ -11,10 +11,10 @@ namespace Company.Hardware.ControlCard
     /// </summary>
     public enum AxisType
     {
-        X,
-        Y, 
-        Z,
-        Up,
-        Down,
+        X = 1,
+        Y = 2,
+        Z = 3,
+        Up = 4,
+        Down =5,
     }
 }

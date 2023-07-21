@@ -128,7 +128,7 @@
     <Error Condition="!Exists('..\packages\ReactiveUI.Fody.19.4.1\build\ReactiveUI.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ReactiveUI.Fody.19.4.1\build\ReactiveUI.Fody.props'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)\bin\Debug\$(ProjectName).dll" "$(SolutionDir)\Shell\bin\Debug\Modules\" /Y /S
-xcopy "$(ProjectDir)\bin\Release\$(ProjectName).dll" "$(SolutionDir)\Shell\bin\Release\Modules\" /Y /S</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

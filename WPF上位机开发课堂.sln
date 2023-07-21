@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Hardware.Camera.HIK
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Hardware.ControlCard", "Company.Hardware.ControlCard\Company.Hardware.ControlCard.csproj", "{A0D2B1FD-C6D3-4D52-892E-FB2F25915558}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Hardware.ControlCard.None", "Company.Hardware.ControlCard.None\Company.Hardware.ControlCard.None.csproj", "{846A6E61-77EE-4AB6-971F-2E6C08D7E044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Hardware.ControlCard.AdTech", "Company.Hardware.ControlCard.AdTech\Company.Hardware.ControlCard.AdTech.csproj", "{45DB8ECE-0E85-456D-9B5D-5C08C2247D3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +129,14 @@ Global
 		{A0D2B1FD-C6D3-4D52-892E-FB2F25915558}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0D2B1FD-C6D3-4D52-892E-FB2F25915558}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0D2B1FD-C6D3-4D52-892E-FB2F25915558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{846A6E61-77EE-4AB6-971F-2E6C08D7E044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{846A6E61-77EE-4AB6-971F-2E6C08D7E044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{846A6E61-77EE-4AB6-971F-2E6C08D7E044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{846A6E61-77EE-4AB6-971F-2E6C08D7E044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45DB8ECE-0E85-456D-9B5D-5C08C2247D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45DB8ECE-0E85-456D-9B5D-5C08C2247D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45DB8ECE-0E85-456D-9B5D-5C08C2247D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45DB8ECE-0E85-456D-9B5D-5C08C2247D3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +159,8 @@ Global
 		{F768114B-5BAA-4361-A4B0-6483E6035C28} = {0881FC87-A4FA-45EA-8948-36CB7D9E8619}
 		{3EF464E8-2E1F-4E48-BDAB-04BD35794409} = {CC3C25D7-59DD-43CB-875C-71CEA86A6181}
 		{A0D2B1FD-C6D3-4D52-892E-FB2F25915558} = {CC3C25D7-59DD-43CB-875C-71CEA86A6181}
+		{846A6E61-77EE-4AB6-971F-2E6C08D7E044} = {CC3C25D7-59DD-43CB-875C-71CEA86A6181}
+		{45DB8ECE-0E85-456D-9B5D-5C08C2247D3C} = {CC3C25D7-59DD-43CB-875C-71CEA86A6181}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5C785D8-BDBC-4457-A3A9-1227B93869D7}

@@ -1,6 +1,7 @@
 ﻿using Company.Application.Share.Config;
 using Company.Core.Ioc;
 using Company.Hardware.Camera;
+using Company.Hardware.ControlCard;
 using Company.Hardware.Detector;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ namespace Company.Application.Config.Services
             SoftwareConfig = SystemConfigManager.Config.SoftwareConfig;
             CameraConfig = SystemConfigManager.Config.CameraConfig;
             DetectorConfig = SystemConfigManager.Config.DetectorConfig;
+            ControlCardConfig = SystemConfigManager.Config.ControlCardConfig;
         }
 
         internal void Invoke()
@@ -41,6 +43,8 @@ namespace Company.Application.Config.Services
         public CameraConfig CameraConfig { get; set; }
 
         public DetectorConfig DetectorConfig { get; set; }
+
+        public ControlCardConfig ControlCardConfig {get; set;}
 
         public event Action OnChanged;
     }

@@ -2,6 +2,7 @@
 using Company.Application.Share.Config;
 using Company.Core.Ioc;
 using Company.Hardware.Camera;
+using Company.Hardware.ControlCard;
 using Company.Hardware.Detector;
 using System;
 using System.Collections.Generic;
@@ -26,15 +27,25 @@ namespace Company.Application.Initialize.Services
         /// </summary>
         public bool IsInitialized { get; set; }
 
+        /// <summary>
+        /// 相机设备
+        /// </summary>
         public ICamera Camera { get; }
-
+        /// <summary>
+        /// 平板探测器设备
+        /// </summary>
         public IDetector Detector { get; }
+        /// <summary>
+        /// 控制卡设备
+        /// </summary>
+        public IControlCard ControlCard { get; }
 
-        public HardwareLifetimeManager(ISystemConfigProvider systemConfigProvider ,ICamera camera, IDetector detector)
+        public HardwareLifetimeManager(ISystemConfigProvider systemConfigProvider ,ICamera camera, IDetector detector,IControlCard controlCard)
         {
             SystemConfigProvider= systemConfigProvider;
             Camera = camera;
             Detector = detector;
+            ControlCard = controlCard; 
         }
 
         /// <summary>
@@ -51,8 +62,9 @@ namespace Company.Application.Initialize.Services
 
             Task<bool> task_camera = Task.Run(() => Camera.Init(SystemConfigProvider));
             Task<bool> task_detector = Task.Run(() => Detector.Init(SystemConfigProvider));
-            
-            var list = await Task.WhenAll(task_camera, task_detector);//等待
+            Task<bool> task_controlcard = Task.Run(() => ControlCard.Init(SystemConfigProvider));
+
+            var list = await Task.WhenAll(task_camera, task_detector,task_controlcard);//等待
             bool result = list.All(p => p);
 
             if (!result)
@@ -62,6 +74,8 @@ namespace Company.Application.Initialize.Services
                     msg += "相机|";
                 if (task_detector.Result == false)
                     msg += "平板探测器|";
+                if (task_controlcard.Result == false)
+                    msg += "控制卡|";
 
                 msg = msg.Remove(msg.Length - 1);
 

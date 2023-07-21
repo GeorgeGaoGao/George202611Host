@@ -19,7 +19,7 @@ namespace Company.Hardware.ControlCard
         /// <summary>
         /// 运动轴是否回零
         /// </summary>
-        public  bool IsAxisHomed { get; private set; }
+        public  bool IsAxisHomed { get;  set; }
 
         /// <summary>
         /// 运动轴正在回零中
@@ -34,6 +34,11 @@ namespace Company.Hardware.ControlCard
         /// 控制卡的配置参数
         /// </summary>
         protected ControlCardConfig Config { get; set; }
+
+        /// <summary>
+        /// 获取AxisType枚举的元素集合
+        /// </summary>
+        protected IEnumerable<AxisType> AxisTypes { get; private set; } = Enum.GetValues(typeof(AxisType)).Cast<AxisType>();
 
         public void Close()
         {
@@ -228,6 +233,13 @@ namespace Company.Hardware.ControlCard
         /// <param name="axisType"></param>
         /// <returns></returns>
         protected abstract bool DoGetAxisEnable(AxisType axisType);
+
+        /// <summary>
+        /// 写某个轴的使能状态
+        /// </summary>
+        /// <param name="axisType"></param>
+        /// <returns></returns>
+        protected abstract bool DoSetAxisEnable(AxisType axisType, bool v);
 
         /// <summary>
         /// 读某个轴的运动状态

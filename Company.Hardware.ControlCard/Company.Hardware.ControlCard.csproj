@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AxisStopMode.cs" />
     <Compile Include="AxisType.cs" />
+    <Compile Include="Bit.cs" />
     <Compile Include="ControlCardBase.cs" />
     <Compile Include="ControlCardConfig.cs" />
     <Compile Include="IControlCard.cs" />

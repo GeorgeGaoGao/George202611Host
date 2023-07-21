@@ -132,6 +132,10 @@
       <Project>{5bdd25f3-d603-43e5-bca8-445c1db96ff0}</Project>
       <Name>Company.Hardware.Camera</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Company.Hardware.ControlCard\Company.Hardware.ControlCard.csproj">
+      <Project>{A0D2B1FD-C6D3-4D52-892E-FB2F25915558}</Project>
+      <Name>Company.Hardware.ControlCard</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Company.Hardware.Detector\Company.Hardware.Detector.csproj">
       <Project>{4bdd85fd-34b0-4726-8c97-c215e30abde9}</Project>
       <Name>Company.Hardware.Detector</Name>

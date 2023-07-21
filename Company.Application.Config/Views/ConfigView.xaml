@@ -4,8 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Company.Application.Config.Views"
-             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-             xmlns:prism="http://prismlibrary.com/" xmlns:controls="clr-namespace:Company.UI.Controls;assembly=Company.UI"
+             xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:prism="http://prismlibrary.com/" 
+             xmlns:controls="clr-namespace:Company.UI.Controls;assembly=Company.UI"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              Width="430" Height="500">
@@ -14,7 +15,7 @@
             <RowDefinition/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TabControl Controls:HeaderedControlHelper.HeaderFontSize="20">
+        <TabControl mah:HeaderedControlHelper.HeaderFontSize="20">
             <TabItem Header="软件设置">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5">
