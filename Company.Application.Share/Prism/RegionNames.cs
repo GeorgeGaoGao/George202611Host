@@ -23,6 +23,34 @@ namespace Company.Application.Share.Prism
         /// </summary>
         public const string MenuRegion = "MenuRegion";
 
+        /// <summary>
+        /// 主要操作区域
+        /// </summary>
+        public const string PrimaryRegion = "PrimaryRegion";
+
+        /// <summary>
+        /// 轴操作区域
+        /// </summary>
+        public const string AxisRegion = "AxisRegion";
+
+        /// <summary>
+        /// 相机预览区域
+        /// </summary>
+        public const string CameraRegion = "CameraRegion";
+
+        /// <summary>
+        /// 图像处理区域
+        /// </summary>
+        public const string ProcessRegion = "ProcessRegion";
+
+        /// <summary>
+        /// 绘图工具区域
+        /// </summary>
+        public const string DrawToolRegion = "DrawToolRegion";
+
+
+
+        
 
     }
 }

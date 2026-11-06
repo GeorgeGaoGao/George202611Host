@@ -7,7 +7,7 @@
              xmlns:share="clr-namespace:Company.Application.Share.Prism;assembly=Company.Application.Share"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             mc:Ignorable="d" Background="LightBlue"
+             mc:Ignorable="d" Background="White"
              d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -20,11 +20,26 @@
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/><!--menu-->
+                <RowDefinition Height="auto"/><!--快捷按钮-->
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <ContentControl Grid.Row="0" prism:RegionManager.RegionName="{x:Static share:RegionNames.MenuRegion}"/>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Button Content="&#xf115;" Style="{StaticResource IconButtonStyle}"/>
+                <Button Content="&#xf0c7;" Style="{StaticResource IconButtonStyle}" ToolTip="保存图像"/>
+                <Button Content="&#xf044;" Style="{StaticResource IconButtonStyle}"/>
+                <Button Content="&#xf293;" Style="{StaticResource IconButtonStyle}"/>
+                <Button Content="&#xf240;" Style="{StaticResource IconButtonStyle}"/>
+                <Button Content="&#xf030;" Style="{StaticResource IconButtonStyle}" ToolTip="相机拍照"/>
+                <Button Content="&#xf03e;" Style="{StaticResource IconButtonStyle}" ToolTip="打开探测器"/>
+                <CheckBox x:Name="mouseWorkMode" Content="&#xf0b2;" Style="{StaticResource IconCheckButtonStyle}"/>
+                <ComboBox x:Name="combobox" Height="25" MinWidth="70" IsEnabled="{Binding ElementName=mouseWorkMode,Path=IsChecked}"/>
+            </StackPanel>
+            <ContentControl Grid.Row="2" prism:RegionManager.RegionName="{x:Static share:RegionNames.PrimaryRegion}"/>
+            <ContentControl Grid.Row="3" prism:RegionManager.RegionName="{x:Static share:RegionNames.AxisRegion}"/>
+            <ContentControl Grid.Row="4" prism:RegionManager.RegionName="{x:Static share:RegionNames.CameraRegion}"/>
         </Grid>
     </Grid>
 </UserControl>

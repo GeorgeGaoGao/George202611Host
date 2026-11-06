@@ -15,7 +15,7 @@
             <RowDefinition/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TabControl mah:HeaderedControlHelper.HeaderFontSize="20">
+        <TabControl mah:HeaderedControlHelper.HeaderFontSize="16" Margin="5">
             <TabItem Header="软件设置">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5">
